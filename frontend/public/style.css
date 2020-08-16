@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  margin: 0;
+  text-align: center;
+  background-image: linear-gradient(100deg, #c96363, #ff0077);
+}
+
+.header {
+  text-align: center;
+  transform: skewY(-3deg);
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+#selphy {
+  position: absolute;
+  bottom: 0;
+  left: 1%;
+
+}
+#api {
+  position: absolute;
+  top: 2%;
+  left: 3%;
+}
+
+#bot {
+  position: absolute;
+  top: 2%;
+  left: 47%;
+}
+
+#invite {
+  position: absolute;
+  top: 2%;
+  left: 90%;
+}
+
+#head {
+  transform: skewY(-2deg);
+  text-align: center;
+}
+
+hr {
+  height: 1px;
+  border: none;
+  background-color: black;
+}
