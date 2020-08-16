@@ -1,3 +1,7 @@
+![kawaii](https://vignette.wikia.nocookie.net/nicodougasingers/images/1/18/Selphy.png/revision/latest?cb=20180907051553)
+
+
+
 # selphiusapi
 a public api for selphybot (under construction)
 
@@ -10,5 +14,17 @@ a public api for selphybot (under construction)
 
 ## credits
 + 6lyxt
+
+
+
+
+
+
+
+
+
+
+
+
 
 
