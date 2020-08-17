@@ -12,7 +12,7 @@ app.get('/api/', function(req, res) {
 
 app.get('/api/song', function(req, res) {
   let channelID = "UCBdIstCmMf6W1IcL7hgyL9Q";
-  let api = "AIzaSyDxj7GeLb6jKxVLbDj68xjlFOM59QJW9Z8";
+  let api = "key";
   let videoUrls = "https://www.googleapis.com/youtube/v3/search?order=date&part=snippet&channelId=" + channelID + "&maxResults=50&key=" + api;
 
   var ajax = new XMLHttpRequest();
