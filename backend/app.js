@@ -1,6 +1,8 @@
 const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-const express = require('express')
+const express = require("express")
+const {config} = require("dotenv")
 const app = express()
+config({ path: __dirname + "/.env" });
 
 app.get('/', function (req, res) {
   res.send('{API Overview: /api/song[], /api/game/element}')
@@ -12,8 +14,9 @@ app.get('/api/', function(req, res) {
 
 app.get('/api/song', function(req, res) {
   let channelID = "UCBdIstCmMf6W1IcL7hgyL9Q";
-  let api = "key";
+  let api = process.env.apiKey;
   let videoUrls = "https://www.googleapis.com/youtube/v3/search?order=date&part=snippet&channelId=" + channelID + "&maxResults=50&key=" + api;
+
 
   var ajax = new XMLHttpRequest();
   ajax.open("GET", videoUrls, true);
