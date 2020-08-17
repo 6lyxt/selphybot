@@ -5,7 +5,7 @@ const app = express()
 config({ path: __dirname + "/.env" });
 
 app.get('/', function (req, res) {
-  res.send('{API Overview: /api/song[], /api/game/element}')
+  res.send('{API Overview: /api/song, /api/game/element}')
 })
 
 app.get('/api/', function(req, res) {
