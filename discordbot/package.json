@@ -1,0 +1,21 @@
+{
+  "name": "discordbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lyxt",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/opus": "^0.3.2",
+    "discord.js": "^12.3.1",
+    "dotenv": "^8.2.0",
+    "env": "0.0.2",
+    "ffmpeg-static": "^4.2.7",
+    "needle": "^2.5.0",
+    "xmlhttprequest": "^1.8.0",
+    "ytdl-core": "^3.2.1"
+  }
+}
