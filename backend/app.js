@@ -5,6 +5,10 @@ const {config} = require("dotenv")
 const app = express()
 config({ path: __dirname + "/.env" });
 
+process.on('uncaughtException', function () {
+  console.log('An internal error occured');
+});
+
 app.get('/', function (req, res) {
   res.send('{API Overview: /api/song, /api/game/element}')
 })
@@ -18,30 +22,33 @@ app.get('/api/song', function(req, res) {
   let api = process.env.apiKey;
   let videoUrls = "https://www.googleapis.com/youtube/v3/search?order=date&part=snippet&channelId=" + channelID + "&maxResults=50&key=" + api;
 
-
   var ajax = new XMLHttpRequest();
   ajax.open("GET", videoUrls, true);
   ajax.send();
   ajax.onreadystatechange = function(){
-    if(this.readyState == 4 && this.status == 200){
+  let stringed = this.responseText.toString();
+      if(stringed.includes("error")) {
+
+        fs.readFile("./api/videos.json", (err,data) => {
+          if(err) return err;
+          var json = JSON.parse(data);
+          var videos = json.items;
+          var random = Math.floor(Math.random() * (videos.length + 1));
+          var video = videos[random];
+          res.send('{"link":"https://www.youtube.com/watch?v='+ video.id.videoId + '", "title": "' + video.snippet.title + '"}');
+        })
+
+
+      } else {
+      if(this.readyState == 4 && this.status == 200){
       var json = JSON.parse(this.responseText);
       var videos = json.items;
       var random = Math.floor(Math.random() * (videos.length + 1));
       var video = videos[random];
-      res.send('{"link":"https://www.youtube.com/watch?v='+ video.id.videoId + '", "title": "' + video.snippet.title + '"}');
-    } else {
-
-      fs.readFile("/api/videos.json", (err,data) => {
-        if(err) return err;
-        console.log("log")
-        var json = JSON.parse(data);
-        var videos = json.items;
-        var random = Math.floor(Math.random() * (videos.length + 1));
-        var video = videos[random];
-        res.send('{"link":"https://www.youtube.com/watch?v='+ video.id.videoId + '", "title": "' + video.snippet.title + '"}');
-      })
+      return res.send('{"link":"https://www.youtube.com/watch?v='+ video.id.videoId + '", "title": "' + video.snippet.title + '"}');
     }
   }
+}
 })
 
 
