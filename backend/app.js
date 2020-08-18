@@ -45,7 +45,7 @@ app.get('/api/song', function(req, res) {
       var videos = json.items;
       var random = Math.floor(Math.random() * (videos.length + 1));
       var video = videos[random];
-      return res.send('{"link":"https://www.youtube.com/watch?v='+ video.id.videoId + '", "title": "' + video.snippet.title + '"}');
+      res.send('{"link":"https://www.youtube.com/watch?v='+ video.id.videoId + '", "title": "' + video.snippet.title + '"}');
     }
   }
 }
