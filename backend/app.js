@@ -1,5 +1,6 @@
 const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 const express = require("express")
+const fs = require("fs")
 const {config} = require("dotenv")
 const app = express()
 config({ path: __dirname + "/.env" });
@@ -28,11 +29,22 @@ app.get('/api/song', function(req, res) {
       var random = Math.floor(Math.random() * (videos.length + 1));
       var video = videos[random];
       res.send('{"link":"https://www.youtube.com/watch?v='+ video.id.videoId + '", "title": "' + video.snippet.title + '"}');
+    } else {
+
+      fs.readFile("/api/videos.json", (err,data) => {
+        if(err) return err;
+        console.log("log")
+        var json = JSON.parse(data);
+        var videos = json.items;
+        var random = Math.floor(Math.random() * (videos.length + 1));
+        var video = videos[random];
+        res.send('{"link":"https://www.youtube.com/watch?v='+ video.id.videoId + '", "title": "' + video.snippet.title + '"}');
+      })
     }
   }
 })
 
 
-app.listen(8000, function(){
-  console.log('running on port 8000');
+app.listen(1337, function(){
+  console.log('running on port 1337');
 })
