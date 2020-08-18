@@ -35,7 +35,11 @@ app.get('/api/song', function(req, res) {
           var videos = json.items;
           var random = Math.floor(Math.random() * (videos.length + 1));
           var video = videos[random];
-          res.send('{"link":"https://www.youtube.com/watch?v='+ video.id.videoId + '", "title": "' + video.snippet.title + '"}');
+          if(video.id.videoId !== undefined){
+            res.send('{"link":"https://www.youtube.com/watch?v='+ video.id.videoId + '", "title": "' + video.snippet.title + '"}');
+          } else {
+            res.send('an error occured')
+          }
         })
 
 
