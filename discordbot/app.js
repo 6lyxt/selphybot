@@ -3,6 +3,7 @@ const { config } = require("dotenv");
 const utils = require('./utils')
 const radioCMD = require('./cmds/radio')
 const helpCMD = require('./cmds/help')
+const liveCMD = require('./cmds/twitch')
 const ytdl = require('ytdl-core');
 const bot = new Discord.Client();
 const version = "1.0.0";
@@ -24,6 +25,10 @@ bot.on('message', msg => {
 
     case prefix + "help":
       helpCMD.help(msg);
+    break;
+
+    case prefix + "live":
+      liveCMD.twitch(msg);
     break;
   }
 });
