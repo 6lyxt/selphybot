@@ -6,6 +6,6 @@ app.get('/', function(req, res) {
     res.render('index.ejs');
 });
 
-app.listen(8000, function() {
-  console.log("running on port 8000")
+app.listen(80, function() {
+  console.log("running on port 80")
 })
