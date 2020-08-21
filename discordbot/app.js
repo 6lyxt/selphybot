@@ -12,7 +12,7 @@ config({ path: __dirname + "/.env" });
 
 bot.on('ready', () => {
   console.log("Selphy ist on!");
-  bot.user.setActivity("selphybot on " + client.guilds.cache.size, {type: "LISTENING"});
+  bot.user.setActivity("music on " + bot.guilds.cache.size + " servers", {type: "PLAYING"});
 })
 
 bot.on('message', msg => {
