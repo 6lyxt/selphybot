@@ -2,10 +2,9 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  overflow: hidden;
   margin: 0;
   text-align: center;
-  background-image: linear-gradient(100deg, #c96363, #ff0077);
+  background-image: linear-gradient(100deg, #c96363, #ed6161);
 }
 
 .header {
@@ -26,6 +25,12 @@ a {
   position: absolute;
   top: 2%;
   left: 3%;
+}
+
+#main {
+  position: absolute;
+  top: 2%;
+  left: 49%;
 }
 
 #bot {
