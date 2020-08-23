@@ -10,6 +10,7 @@ a public api & discord service about selphius (under construction)
 
 + /api/ [shows api routes]
 + /api/song [returns a random song from selphy's channel]
++ /api/flip [returns a random character from backend/api/characters.json]
 
 ## services
 + discord bot
