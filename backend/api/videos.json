@@ -758,40 +758,6 @@
       },
       {
          "kind":"youtube#searchResult",
-         "etag":"hNty6Jn2O3A6WvaU-qBODFnH6Pk",
-         "id":{
-            "kind":"youtube#video",
-            "videoId":"ignDWTKKkzY"
-         },
-         "snippet":{
-            "publishedAt":"2020-02-28T16:44:53Z",
-            "channelId":"UCBdIstCmMf6W1IcL7hgyL9Q",
-            "title":"Hey du! Woah, ANKÜNDIGUNG! (ﾉ´ヮ´)ﾉ",
-            "description":"Merch-Shop ▻ https://www.elbster.de/2027-selphy ✦ Poster ▻ https://www.elbster.de/2031-selphys-poster ✦ Tassen & Mauspads ...",
-            "thumbnails":{
-               "default":{
-                  "url":"https://i.ytimg.com/vi/ignDWTKKkzY/default.jpg",
-                  "width":120,
-                  "height":90
-               },
-               "medium":{
-                  "url":"https://i.ytimg.com/vi/ignDWTKKkzY/mqdefault.jpg",
-                  "width":320,
-                  "height":180
-               },
-               "high":{
-                  "url":"https://i.ytimg.com/vi/ignDWTKKkzY/hqdefault.jpg",
-                  "width":480,
-                  "height":360
-               }
-            },
-            "channelTitle":"Selphius",
-            "liveBroadcastContent":"none",
-            "publishTime":"2020-02-28T16:44:53Z"
-         }
-      },
-      {
-         "kind":"youtube#searchResult",
          "etag":"iTzLKUdKuMXarzCv2QJJI7oqmCk",
          "id":{
             "kind":"youtube#video",
@@ -1094,40 +1060,6 @@
             "channelTitle":"Selphius",
             "liveBroadcastContent":"none",
             "publishTime":"2019-12-31T13:00:12Z"
-         }
-      },
-      {
-         "kind":"youtube#searchResult",
-         "etag":"CohV0SAVPzsB4uz_2eUBZfDFiPg",
-         "id":{
-            "kind":"youtube#playlist",
-            "playlistId":"PLSgoHdjQXx8pYwrbtnFyGB4SVouY7gR0L"
-         },
-         "snippet":{
-            "publishedAt":"2019-12-28T13:39:15Z",
-            "channelId":"UCBdIstCmMf6W1IcL7hgyL9Q",
-            "title":"Coversongs 2019 | Selphius",
-            "description":"Alle Coversongs von Selphius aus dem Jahr 2019 ✦ Vielen Dank fürs Begleiten auf diesem Weg bisher. Ich habe 2019 so viele meiner Pläne verwirklichen ...",
-            "thumbnails":{
-               "default":{
-                  "url":"https://i.ytimg.com/vi/JFZRGhAdsxc/default.jpg",
-                  "width":120,
-                  "height":90
-               },
-               "medium":{
-                  "url":"https://i.ytimg.com/vi/JFZRGhAdsxc/mqdefault.jpg",
-                  "width":320,
-                  "height":180
-               },
-               "high":{
-                  "url":"https://i.ytimg.com/vi/JFZRGhAdsxc/hqdefault.jpg",
-                  "width":480,
-                  "height":360
-               }
-            },
-            "channelTitle":"Selphius",
-            "liveBroadcastContent":"none",
-            "publishTime":"2019-12-28T13:39:15Z"
          }
       },
       {

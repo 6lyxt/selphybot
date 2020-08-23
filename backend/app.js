@@ -9,15 +9,25 @@ process.on('uncaughtException', function () {
   console.log('An internal error occured');
 });
 
-app.get('/', function (req, res) {
+app.get('/', async function (req, res) {
   res.send('/api, /api/song')
 })
 
-app.get('/api/', function(req, res) {
+app.get('/api/', async function(req, res) {
   res.send('/song')
 })
 
-app.get('/api/song', function(req, res) {
+app.get('/api/flip', async function(req, res) {
+    fs.readFile("./api/characters.json", (err,data) => {
+      let json = JSON.parse(data);
+      let info = json.items;
+      let random = Math.floor(Math.random() * (info.length + 1));
+      let final = info[random];
+      res.send('{"character": "' + final.character + '", "picture": "' + final.picture + '"}');
+    })
+})
+
+app.get('/api/song', async function(req, res) {
   let channelID = "UCBdIstCmMf6W1IcL7hgyL9Q";
   let api = process.env.apiKey;
   let videoUrls = "https://www.googleapis.com/youtube/v3/search?order=date&part=snippet&channelId=" + channelID + "&maxResults=50&key=" + api;
