@@ -8,7 +8,6 @@ process.on('uncaughtException', function () {
   console.log('An internal error occured');
 });
 
-
 module.exports = {
   radio: async function radio(msg){
     if(!msg.member.voice.channel) return msg.reply("du musst in einem Voice Channel sein, damit du dem Radio lauschen kannst!")
@@ -25,7 +24,7 @@ module.exports = {
             let url = jsonfs.link;
             let title = jsonfs.title;
             let thumb = jsonfs.thumbnail;
-            utils.throwEmbed(msg, "Radio", "Momentan läuft: \n" + title, "#c96363", thumb, url)
+            utils.throwEmbed(msg, "Radio", "Momentan läuft: \n" + title, "#c96363", thumb, url, false)
             const stream = ytdl(url, { filter: 'audioonly' });
             const dispatcher = connection.play(stream);
             dispatcher.on('finish', () => radio(msg));

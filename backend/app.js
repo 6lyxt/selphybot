@@ -10,11 +10,11 @@ process.on('uncaughtException', function () {
 });
 
 app.get('/', async function (req, res) {
-  res.send('/api, /api/song')
+  res.send('/api, /api/song, /api/flip')
 })
 
 app.get('/api/', async function(req, res) {
-  res.send('/song')
+  res.send('/song, /flip')
 })
 
 app.get('/api/flip', async function(req, res) {
