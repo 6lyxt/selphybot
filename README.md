@@ -2,7 +2,7 @@
 
 
 
-# selphybot
+# selphybot v1.1
 a public api & discord service about selphius (under construction)
 
 
